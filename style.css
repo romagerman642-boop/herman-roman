@@ -1,0 +1,212 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(circle, #4b1a1a, #0d0d0d);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; 
+}
+
+.app-container {
+    background: rgba(40, 20, 20, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 87, 34, 0.3);
+    border-radius: 20px;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 0 40px rgba(255, 69, 0, 0.2);
+    text-align: center;
+    position: relative;
+    z-index: 10; 
+}
+
+.fade-in {
+    animation: fadeInAnim 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeInAnim {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: rgba(255, 69, 0, 0.1); 
+    border-radius: 50px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 69, 0, 0.3);
+    font-weight: bold;
+}
+
+#answers-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    justify-content: center;
+}
+
+.answer-btn {
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 48%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.answer-btn:hover:not(:disabled) {
+    background: rgba(255, 69, 0, 0.4);
+    transform: scale(1.05);
+    border-color: rgba(255, 69, 0, 0.6);
+}
+
+.image-option {
+    height: 140px;
+    display: flex;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.image-option img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.correct { 
+    background-color: #ff5722 !important; 
+    border-color: #ff9800 !important; 
+}
+
+.wrong { 
+    background-color: #333 !important; 
+    opacity: 0.5; 
+}
+
+#start-btn, #restart-btn {
+    background: #ff5722;
+    padding: 15px 40px;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(255, 87, 34, 0.4);
+}
+
+#start-btn:hover, #restart-btn:hover {
+    background: #e64a19;
+    box-shadow: 0 0 25px rgba(255, 87, 34, 0.7);
+}
+
+#best-score {
+    font-size: 14px;
+    color: #ff9800;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.hide { 
+    display: none !important; 
+}
+
+#space-container {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    color: #ffccbc;
+    user-select: none;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    0% { 
+        transform: translateY(-50px) rotate(0deg); 
+        opacity: 1; 
+    }
+    100% { 
+        transform: translateY(110vh) rotate(360deg); 
+        opacity: 0; 
+    }
+    
+.answer-btn {
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 48%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Плавний перехід */
+    outline none
+}
+
+
+.answer-btn:hover:not(:disabled) {
+    background: rgba(255, 69, 0, 0.4);
+    transform: scale(1.05);
+    border-color: rgba(255, 69, 0, 0.6);
+    box-shadow: 0 0 15px rgba(255, 69, 0, 0.3);
+}
+
+
+.answer-btn:active:not(:disabled) {
+    transform: scale(0.95);
+}
+
+
+#start-btn, #restart-btn {
+    background: #ff5722;
+    padding: 15px 40px;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(255, 87, 34, 0.4);
+    animation: pulse 2s infinite;
+}
+
+#start-btn:hover, #restart-btn:hover {
+    background: #e64a19;
+    box-shadow: 0 0 25px rgba(255, 87, 34, 0.7);
+    transform: translateY(-3px);
+}
+
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); box-shadow: 0 0 25px rgba(255, 87, 34, 0.6); }
+    100% { transform: scale(1); }
+}

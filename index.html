@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Місія: Марс — Квіз</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="space-container"></div>
+
+    <div class="app-container">
+        <div id="start-screen">
+            <h1>Місія: МАРС</h1>
+            <p>Готовий летіти на Червону планету? Пройди тест, щоб перевірити свої знання.</p>
+            <button id="start-btn">ЗАПУСК</button>
+        </div>
+
+        <div id="quiz-screen" class="hide">
+            <div class="header">
+                <span id="timer">Кисень: 15с</span>
+                <span id="score-display">Дані: 0</span>
+            </div>
+            <h2 id="question-text">Завантаження запитання...</h2>
+            <div id="answers-container"></div>
+        </div>
+
+        <div id="result-screen" class="hide">
+            <h2>Звіт про місію</h2>
+            <p class="result-text"></p>
+            <p>Твій результат: <span id="final-score">0</span></p>
+            <button id="restart-btn">ПОВТОРИТИ ЗАПУСК</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
